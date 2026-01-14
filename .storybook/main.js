@@ -1,18 +1,8 @@
-import { mergeConfig } from 'vite';
-
 export default {
-  framework: '@storybook/react-vite',
-  stories: [
-    '../src/**/*.stories.@(js|jsx|ts|tsx)',
-    '../src/**/*.mdx'
-  ],
-  addons: [
-    '@storybook/addon-links',
-    '@storybook/addon-essentials'
-  ],
-  viteFinal: async (config) => {
-    return mergeConfig(config, {
-      // You can customize Vite config here if needed
-    });
+  framework: {
+    name: '@storybook/react-vite',
+    options: {}
   },
+  stories: ['../src/**/*.stories.@(js|jsx|ts|tsx|mdx)'],
+  addons: ["@storybook/addon-vitest", '@storybook/addon-a11y']
 };
