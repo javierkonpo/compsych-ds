@@ -1,70 +1,122 @@
-# Getting Started with Create React App
+# ComPsych Design System (DS)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The ComPsych Design System (DS) is a centralized React component library created to enforce design consistency, accelerate development, and provide a shared visual language across all ComPsych digital products. It serves as the single source of truth for reusable UI components, styling rules, and interaction patterns.
 
-## Available Scripts
+# Getting Started
 
-In the project directory, you can run:
+To begin working with the ComPsych Design System, clone the repository and install dependencies:
 
-### `npm start`
+```bash
+git clone https://github.com/javierkonpo/compsych-ds.git
+cd compsych-ds
+npm install
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Running the Design System Locally
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This Design System is intended to be developed and viewed locally.  
+Teams can run Storybook to browse components, test variations, and inspect behavior without running a full application.
 
-### `npm test`
+Start Storybook:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm run storybook
+```
 
-### `npm run build`
+Storybook will launch at:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+http://localhost:6006
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# What Engineering Can Expect
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Component Structure
 
-### `npm run eject`
+All components are built in React and stored in:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+src/stories/
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Each component includes:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- JSX implementation  
+- Component-specific CSS  
+- Storybook documentation  
+- Props and usage controls  
+- Component variations and states  
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Development Flow
 
-## Learn More
+1. Run Storybook locally  
+2. Open a component inside `src/stories`  
+3. Modify JSX or styles as needed  
+4. Storybook reloads automatically  
+5. Add or update stories to document new states  
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Engineering Benefits
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Build components in isolation  
+- Reduce duplicated UI work  
+- Improve cross-product code consistency  
+- Test responsiveness and states in real time  
+- Clear documentation for every component  
 
-### Code Splitting
+# What Design Can Expect
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Visual Accuracy
 
-### Analyzing the Bundle Size
+Storybook displays components exactly as they will appear in production, ensuring design and engineering stay fully aligned.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Interactive Controls
 
-### Making a Progressive Web App
+Designers can preview variations by adjusting:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Size  
+- Color  
+- States (hover, focus, disabled)  
+- Layout settings  
 
-### Advanced Configuration
+### Shared Source of Truth
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Storybook provides a central reference for:
 
-### Deployment
+- Colors  
+- Typography  
+- Spacing  
+- Buttons  
+- Layouts  
+- UI behavior and interaction states  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+# Component Overview
 
-### `npm run build` fails to minify
+### Button
+- Primary & secondary variants  
+- Multiple sizes  
+- Interactive states  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Header
+- Authenticated and unauthenticated versions  
+- Responsive layout  
+
+### Page Template
+- Base layout structure  
+- Content sections  
+
+Additional components will be added as the system grows.
+
+# Repository Structure
+
+```
+compsych-ds/
+│
+├── .storybook/        # Storybook configuration
+├── public/            # Static assets
+├── src/
+│   ├── stories/       # Components + Storybook stories
+│   ├── index.js       # React entry point
+│
+├── package.json
+└── README.md
+```
