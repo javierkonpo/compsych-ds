@@ -1,6 +1,6 @@
 # ComPsych Design System (DS)
 
-The ComPsych Design System (DS) is a centralized React component library created to enforce design consistency, accelerate development, and provide a shared visual language across all ComPsych digital products. It serves as the single source of truth for reusable UI components, styling rules, and interaction patterns.
+The ComPsych Design System is a centralized component library created to enforce design consistency, accelerate development, and provide a shared visual language across all ComPsych digital products. It serves as the single source of truth for reusable UI components, styling rules, and interaction patterns.
 
 # Getting Started
 
